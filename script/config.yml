@@ -1,0 +1,107 @@
+# 登陆相关配置
+login:
+  # 开放的模拟登陆api服务器地址
+  api: 'http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login'
+
+# 不填默认按user中的school查找核心api
+core-api:
+  # 登录url
+  login-url: 'https://auth.sziit.edu.cn/authserver/login?service=https%3A%2F%2Fsziit.campusphere.net%2Fportal%2Flogin'
+  # 主域名（sziit）
+  host: 'sziit.campusphere.net'
+
+# 签到执行时间
+times:
+  - time: '06:31'
+  - time: '11:31'
+  - time: '18:31'
+
+# 邮箱服务器配置
+mail:
+  # 发件服务器
+  smtpserver: 'smtp.163.com'    
+  # 发件人邮箱              
+  sender: 'zxchengb@163.com'      
+  # 发件人密码   
+  pwd: 'IGVVFDNJPIHDJMKR'        
+  # 邮件标题    
+  subject: '今日校园APP打卡结果'
+
+# 用户组配置
+users:
+  - user:
+      # username 学号或者工号
+      username: '2007134150'
+      # password 密码
+      password: 'zxb990304'
+      # address 地址，定位信息  中国河南省xx市xx区xx路
+      address: 中国广东省深圳市龙岗区龙格路299号
+      # email 接受通知消息的邮箱
+      email: zxchengb@qq.com
+      # school 学校全称
+      school: 深圳信息职业技术学院
+      # lon 经度
+      lon: '114.221656'
+      # lat 纬度
+      lat: '22.691272'
+      # abnormalReason 反馈信息
+      abnormalReason: 
+      # photo 签到照片，不需要可不填，或者直接删除
+      photo:
+  - user:
+      # username 学号或者工号
+      username: '1907119117'
+      # password 密码
+      password: 'a6321362'
+      # address 地址，定位信息  中国河南省xx市xx区xx路
+      address: 中国广东省深圳市龙岗区龙格路299号
+      # email 接受通知消息的邮箱
+      email: '2061975598@qq.com'
+      # school 学校全称
+      school: '深圳信息职业技术学院'
+      # lon 经度
+      lon: '114.221656'
+      # lat 纬度
+      lat: '22.691272'
+      # abnormalReason 反馈信息
+      abnormalReason: 
+      # photo 签到照片，不需要可不填，或者直接删除
+      photo:
+  - user:
+      # username 学号或者工号
+      username: '2007134122'
+      # password 密码
+      password: 'Damon.0915'
+      # address 地址，定位信息  中国河南省xx市xx区xx路
+      address: '中国广东省深圳市龙岗区龙城街道2188号'
+      # email 接受通知消息的邮箱
+      email: '870437050@qq.com'
+      # school 学校全称
+      school: '深圳信息职业技术学院'
+      # lon 经度
+      lon: '113.39481756'
+      # lat 纬度
+      lat: '23.40800373'
+      # abnormalReason 反馈信息
+      abnormalReason: 
+      # photo 签到照片，不需要可不填，或者直接删除
+      photo: 
+
+# 今日校园相关配置
+cpdaily:
+  # 是否检查问题,true检查，false不检查
+  check: true
+  # 附加信息组默认选项配置，没有可留空
+  defaults:
+  # 附加信息组默认选项配置，按顺序，可留空
+  # 新增title模糊匹配（即无需输入完整标题）
+    - default:
+        # 表单项标题
+        title: 您的体温是否在37.3°及以上？
+        # 表单项默认值
+        value: 否
+    - default:
+        # 表单项标题
+        title: 您是否存在咳嗽
+        # 表单项默认值
+        value: 否

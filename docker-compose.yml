@@ -1,0 +1,12 @@
+version: '3'
+services:
+  auto-sign:
+    image: python:latest
+    container_name: auto-sign
+    privileged: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./script:/auto-sign
+      # auto-sign镜像执行脚本（检查处理依赖问题）
+      - ./script/entrypoint.sh:/usr/local/bin/entrypoint.sh
+    entrypoint: ["bash", "/usr/local/bin/entrypoint.sh"]
